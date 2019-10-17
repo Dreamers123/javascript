@@ -1,0 +1,46 @@
+<html>
+<title>Train Ticket Reservation</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+   <div class="container">
+   <h1 id="demo"></h1>
+   <h1 onclick="this.innerHTML = 'Ooops!'">Click on this text!</h1>
+   <input type="button" value="Load new document" onclick="newDoc()">
+   <input type="button" value="Back" onclick="goBack()">
+   <button onclick="setTimeout(myFunction, 3000)">Try it</button>
+  
+   <button onclick="displayDate()" onmouseleave="setTimeout(removeDate, 5000)" >Display Date</button>
+   </div>
+   <script>
+   function displayDate()
+   {
+     var dt = new Date();  
+	 document.getElementById("demo").innerHTML = dt;
+   }
+   document.getElementById("demo").style.color = "lightgreen";
+   function removeDate()
+   {
+     document.getElementById("demo").innerHTML=" ";
+   }
+   function myFunction() 
+   {
+    alert('Hello');
+   }
+   function newDoc() 
+   {
+     window.location.assign("https://www.w3schools.com")
+   }
+   function goBack() 
+   {
+     window.history.back()
+   }
+   </script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   <script src="app.js"></script>
+</body>
+</html>
