@@ -9,7 +9,25 @@
 <body>
    <div class="container">
    <h1 id="demo"></h1>
-   <h1 onclick="this.innerHTML = 'Ooops!'">Click on this text!</h1>
+
+   <div id="result" style="color: lightblue;font-weight: bold;font-size: 20px"></div>
+
+   <script>
+// Check browser support
+      if (typeof(Storage) !== "undefined") {
+        // Store
+        localStorage.setItem("lastname", "Abeer");
+        // Retrieve
+        document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+
+      } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+      }
+    </script>
+
+
+
+   <!-- <h1 onclick="this.innerHTML = 'Ooops!'">Click on this text!</h1>
    <input type="button" value="Load new document" onclick="newDoc()">
    <input type="button" value="Back" onclick="goBack()">
    <button onclick="setTimeout(myFunction, 3000)">Try it</button>
@@ -41,6 +59,6 @@
    }
    </script>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-   <script src="app.js"></script>
+   <script src="app.js"></script> -->
 </body>
 </html>
